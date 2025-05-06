@@ -13,6 +13,7 @@ class PageController extends Controller
             ['judul' => 'Belajar PHP 8', 'pengarang' => 'Budi Santoso', 'stok' => 5],
         ];
     }
+
     public function Login (){
         return view('login');
     }
@@ -32,5 +33,9 @@ class PageController extends Controller
         $books = $this -> getBooks();
         return view ('pengelolaan', compact ('books'));
     }
-    
+
+    public function profile (Request $request) {
+        $username = $request -> query('username');
+        return view ('profile', compact('username'));
+    }
 }

@@ -8,7 +8,7 @@
         </h1>
     </div>
     <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        @foreach(array_slice($books ?? [], 0, 4) as $book)
+        @foreach(($books ?? []) as $book)
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition">
                 <div class="p-4">
                     <h3 class="font-semibold text-lg text-gray-800 truncate">{{ $book['judul'] }}</h3>
@@ -26,7 +26,7 @@
         <a class="px-5 py-2 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition">
             Edit
         </a>
-        <a class="px-5 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-green-600 transition">
+        <a class="px-5 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition">
             Hapus
         </a>
     </div>

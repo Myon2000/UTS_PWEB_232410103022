@@ -13,11 +13,13 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', [PageController::class, 'Login'])
+Route::get('/', [PageController::class, 'login'])
     ->name('login');
 Route::post('/login', [pageController::class, 'doLogin'])
     ->name('doLogin');
-Route::get('/dashboard', [PageController::class, 'Dashboard'])
+Route::get('/dashboard', [PageController::class, 'dashboard'])
     ->name('dashboard');
-Route::get('/pengelolaan', [PageController::class, 'Pengelolaan'])
+Route::get('/pengelolaan', [PageController::class, 'pengelolaan'])
     ->name('pengelolaan');
+Route::get('/profile', [pageController::class, 'profile'])
+    ->name('profile');

@@ -39,7 +39,7 @@
 
     <h2 class="text-2xl font-semibold text-gray-700 mb-4">Buku Favorit</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        @foreach(array_slice($books ?? [], 0, 4) as $book)
+        @foreach(($books ?? []) as $book)
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition">
                 <div class="p-4">
                     <h3 class="font-semibold text-lg text-gray-800 truncate">{{ $book['judul'] }}</h3>
